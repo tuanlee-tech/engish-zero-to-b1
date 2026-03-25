@@ -8,10 +8,11 @@
 
 | Date | Type | Wrong | Correct | Status |
 |------|------|-------|---------|--------|
-| (AI adds here) | | | | open/resolved |
+| (Chưa có lỗi nào — Day 001 hoàn hảo!) | | | | |
 
 ## Pronunciation Difficulties
-<!-- IPA sounds I struggle with -->
+- /ɪ/ vs /iː/ — cần luyện thêm để phân biệt rõ (âm /ɪ/ không có trong tiếng Việt)
+- /æ/ — âm mới, cần mở miệng rộng hơn bình thường
 
 ## Grammar Confusion Points
-<!-- Grammar rules I often mix up -->
+<!-- Chưa có — sẽ cập nhật khi phát hiện -->

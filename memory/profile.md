@@ -1,18 +1,18 @@
 # Learner Profile
 
-**Name:** [Tên của bạn]
+**Name:** Tuân
 **Native language:** Vietnamese
 **Goal:** English from zero → B1
 **Timeline:** 120 days
 **Daily time:** 90 minutes
-**Start date:** [YYYY-MM-DD]
+**Start date:** 2026-03-25
 
 ## Current Level
 - Speaking: Beginner
 - Listening: Beginner
 - Reading: Beginner
 - Writing: Beginner
-- IPA knowledge: None yet
+- IPA knowledge: /iː/ /ɪ/ /æ/ (Day 001)
 
 ## Learning Style
 - Bilingual inline stories (Vietnamese + **bold English**)
