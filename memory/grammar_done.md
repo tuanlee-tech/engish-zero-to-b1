@@ -7,4 +7,4 @@
 
 | Day | Grammar Point | Formula | Example | Mastery |
 |-----|--------------|---------|---------|---------|
-| 001 | To be (am/is/are) | I am / You are / He·She·It is / We·They are | I am a student. She is happy. | 2 |
+| 001 | To be (Affirmative, Negative, Questions) | I am / am not / Am I? | I am a student. Is she happy? | 3 |

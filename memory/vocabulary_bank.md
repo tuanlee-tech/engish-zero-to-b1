@@ -30,4 +30,20 @@
 | and | /ænd/ | và | 001 |
 | at | /æt/ | tại, ở | 001 |
 | cat | /kæt/ | con mèo | 001 |
-| hat | /hæt/ | cái mũ | 001 |
+| hat | /æt/ | cái mũ | 001 |
+| book | /bʊk/ | cuốn sách | 002 |
+| pen | /pen/ | cái bút | 002 |
+| bag | /bæɡ/ | cái túi / cặp | 002 |
+| blue | /bluː/ | màu xanh dương | 002 |
+| new | /nuː/ | mới | 002 |
+| old | /oʊld/ | cũ | 002 |
+| big | /bɪɡ/ | to, lớn | 002 |
+| small | /smɔːl/ | nhỏ, bé | 002 |
+| shoe | /ʃuː/ | chiếc giày | 002 |
+| glue | /ɡluː/ | keo dán | 002 |
+| move | /muːv/ | di chuyển | 002 |
+| moon | /muːn/ | mặt trăng | 002 |
+| foot | /fʊt/ | bàn chân | 002 |
+| good | /ɡʊd/ | tốt, giỏi | 002 |
+| put | /pʊt/ | đặt, để | 002 |
+| look | /lʊk/ | nhìn | 002 |
