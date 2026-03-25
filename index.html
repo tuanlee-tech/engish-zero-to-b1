@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lộ Trình Học Tiếng Anh Từ Đầu</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1208;
+    --paper: #f7f3ec;
+    --paper-dark: #ede8df;
+    --accent: #b84a2e;
+    --accent-light: #e8c5bb;
+    --gold: #c9971c;
+    --blue: #2a4a7f;
+    --blue-light: #d0ddf0;
+    --green: #2d6a4f;
+    --green-light: #d8f3dc;
+    --muted: #7a6e60;
+    --rule: #d4cec4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.75;
+    padding: 0 0 80px;
+  }
+
+  /* ─── HEADER ─── */
+  .masthead {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 56px 24px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .masthead::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.02) 40px,
+      rgba(255,255,255,0.02) 41px
+    );
+  }
+  .masthead-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .masthead h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(32px, 6vw, 60px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  .masthead-sub {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 18px;
+    color: rgba(247,243,236,0.7);
+    margin-bottom: 32px;
+  }
+  .masthead-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 5px 14px;
+    border: 1px solid rgba(247,243,236,0.25);
+    color: rgba(247,243,236,0.75);
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+
+  /* ─── LAYOUT ─── */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ─── OVERVIEW SECTION ─── */
+  .overview {
+    background: var(--paper-dark);
+    border-bottom: 1px solid var(--rule);
+    padding: 48px 24px;
+  }
+  .overview-grid {
+    max-width: 820px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .overview-cell {
+    background: var(--paper-dark);
+    padding: 24px;
+    text-align: center;
+  }
+  .overview-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .overview-unit {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .overview-desc {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 6px;
+    font-style: italic;
+  }
+
+  /* ─── SECTION TITLES ─── */
+  .section-header {
+    padding: 52px 0 24px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 36px;
+  }
+  .section-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+  }
+
+  /* ─── PHASE BLOCKS ─── */
+  .phase {
+    margin-bottom: 56px;
+    border-left: 4px solid var(--ink);
+    padding-left: 28px;
+  }
+  .phase-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .phase-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .phase-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .phase-range {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .phase-goal {
+    background: var(--blue-light);
+    border-left: 3px solid var(--blue);
+    padding: 12px 16px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: var(--blue);
+  }
+  .phase-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .skill-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+  }
+  .badge-ipa { background: #fff3cd; color: #856404; }
+  .badge-grammar { background: #d1ecf1; color: #0c5460; }
+  .badge-vocab { background: #d4edda; color: #155724; }
+  .badge-reading { background: #f8d7da; color: #721c24; }
+  .badge-writing { background: #e2d9f3; color: #432874; }
+  .badge-speaking { background: #fde8d8; color: #7b3400; }
+  .badge-shadowing { background: #d0f0e8; color: #0d4f3c; }
+
+  /* ─── DAILY SCHEDULE ─── */
+  .daily-schedule {
+    background: var(--paper-dark);
+    border: 1px solid var(--rule);
+    padding: 32px;
+    margin: 36px 0;
+  }
+  .schedule-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .schedule-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+  .time-block {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 0;
+    margin-bottom: 2px;
+  }
+  .time-block:last-child { margin-bottom: 0; }
+  .time-cell {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 10px 16px 10px 0;
+    border-right: 1px solid var(--rule);
+    white-space: nowrap;
+  }
+  .activity-cell {
+    padding: 10px 0 10px 16px;
+    font-size: 15px;
+  }
+  .activity-cell strong { color: var(--accent); font-weight: 600; }
+  .activity-cell em { color: var(--muted); font-size: 13px; font-style: italic; }
+
+  /* ─── DAY CARDS ─── */
+  .days-grid {
+    display: grid;
+    gap: 32px;
+    margin: 36px 0;
+  }
+  .day-card {
+    border: 1px solid var(--rule);
+    overflow: hidden;
+  }
+  .day-card-header {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .day-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  .day-topic {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .day-card-body {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 600px) {
+    .day-card-body { grid-template-columns: 1fr; }
+  }
+  .day-section-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .ipa-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 15px;
+  }
+  .ipa-symbol {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    color: var(--accent);
+    min-width: 32px;
+  }
+  .ipa-example { color: var(--muted); font-size: 13px; }
+  .vocab-row {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+  .vocab-en { font-weight: 600; color: var(--blue); }
+  .vocab-ipa { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); }
+  .vocab-vi { font-size: 14px; color: var(--muted); }
+
+  /* ─── BILINGUAL STORY ─── */
+  .story-block {
+    margin: 32px 0;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding: 28px 0 24px;
+  }
+  .story-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .story-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 18px;
+    color: var(--ink);
+  }
+  .story-text {
+    font-size: 17px;
+    line-height: 2;
+    color: var(--ink);
+  }
+  .story-text .en {
+    font-weight: 700;
+  }
+  .story-note {
+    margin-top: 16px;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--muted);
+    padding-left: 16px;
+    border-left: 2px solid var(--rule);
+  }
+
+  /* ─── GRAMMAR BOX ─── */
+  .grammar-box {
+    background: var(--blue-light);
+    border: 1px solid #b8cde8;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+  .grammar-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 10px;
+  }
+  .grammar-formula {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    background: rgba(255,255,255,0.5);
+    padding: 8px 14px;
+    border-radius: 2px;
+    margin: 8px 0;
+    color: var(--ink);
+  }
+  .grammar-ex {
+    font-size: 15px;
+    margin: 6px 0;
+  }
+  .grammar-ex .en { font-weight: 600; color: var(--blue); }
+  .grammar-ex .vi { color: var(--muted); font-style: italic; }
+
+  /* ─── TIPS ─── */
+  .tip-box {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 15px;
+    color: var(--green);
+  }
+  .tip-box strong { font-weight: 600; }
+
+  /* ─── PROGRESS TRACKER ─── */
+  .tracker-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin: 16px 0;
+  }
+  .tracker-cell {
+    aspect-ratio: 1;
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .tracker-cell:hover { background: var(--accent-light); }
+  .tracker-cell.done { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+  /* ─── DIVIDER ─── */
+  .rule { border: none; border-top: 1px solid var(--rule); margin: 40px 0; }
+  .rule-heavy { border: none; border-top: 2px solid var(--ink); margin: 48px 0; }
+
+  /* ─── CALLOUT ─── */
+  .callout {
+    background: var(--accent);
+    color: white;
+    padding: 24px 28px;
+    margin: 32px 0;
+  }
+  .callout-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .callout p { font-size: 15px; opacity: 0.9; }
+
+  /* ─── TOOL LIST ─── */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .tool-card {
+    border: 1px solid var(--rule);
+    padding: 18px;
+  }
+  .tool-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .tool-purpose {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  .tool-skill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ─── STICKY NAV ─── */
+  .toc {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--ink);
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .toc::-webkit-scrollbar { display: none; }
+  .toc-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(247,243,236,0.6);
+    padding: 12px 20px;
+    white-space: nowrap;
+    text-decoration: none;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    transition: color 0.2s, background 0.2s;
+  }
+  .toc-link:hover { color: var(--gold); background: rgba(255,255,255,0.04); }
+
+  /* ─── ANIMATION ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .day-card { animation: fadeUp 0.4s ease both; }
+  .day-card:nth-child(1) { animation-delay: 0.05s; }
+  .day-card:nth-child(2) { animation-delay: 0.1s; }
+  .day-card:nth-child(3) { animation-delay: 0.15s; }
+
+  /* ─── PRINT ─── */
+  @media print {
+    .toc { display: none; }
+    .day-card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-label">Lộ Trình Cá Nhân · Từ Zero Đến B1</div>
+  <h1>Học Tiếng Anh<br>Từ Đầu</h1>
+  <div class="masthead-sub">IPA · Ngữ pháp · Từ vựng · Đọc · Viết · Nói · Shadowing</div>
+  <div class="masthead-tags">
+    <span class="tag">120 ngày</span>
+    <span class="tag">4 giai đoạn</span>
+    <span class="tag">Truyện song ngữ hàng ngày</span>
+    <span class="tag">Dành cho người Việt</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="toc">
+  <a href="#overview" class="toc-link">Tổng quan</a>
+  <a href="#daily" class="toc-link">Lịch ngày</a>
+  <a href="#phase1" class="toc-link">Giai đoạn 1</a>
+  <a href="#phase2" class="toc-link">Giai đoạn 2</a>
+  <a href="#phase3" class="toc-link">Giai đoạn 3</a>
+  <a href="#phase4" class="toc-link">Giai đoạn 4</a>
+  <a href="#tools" class="toc-link">Công cụ</a>
+  <a href="#method" class="toc-link">Phương pháp</a>
+</nav>
+
+<!-- OVERVIEW -->
+<section id="overview" class="overview">
+  <div class="overview-grid">
+    <div class="overview-cell">
+      <div class="overview-num">120</div>
+      <div class="overview-unit">ngày</div>
+      <div class="overview-desc">từ zero đến B1</div>
+    </div>
+    <div class="overview-cell">
+      <div class="overview-num">90'</div>
+      <div class="overview-unit">mỗi ngày</div>
+      <div class="overview-desc">chia thành 3 buổi nhỏ</div>
+    </div>
+    <div class="overview-cell">
+      <div class="overview-num">4</div>
+      <div class="overview-unit">giai đoạn</div>
+      <div class="overview-desc">từng bước rõ ràng</div>
+    </div>
+    <div class="overview-cell">
+      <div class="overview-num">7</div>
+      <div class="overview-unit">kỹ năng</div>
+      <div class="overview-desc">IPA · ngữ pháp · từ vựng · đọc · viết · nói · shadowing</div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- DAILY STRUCTURE -->
+  <div id="daily" class="section-header">
+    <div class="section-eyebrow">Cấu trúc hàng ngày</div>
+    <div class="section-title">Mỗi Ngày Học Gì?</div>
+  </div>
+
+  <div class="daily-schedule">
+    <div class="schedule-title">Lịch học 90 phút / ngày</div>
+    <div class="time-block">
+      <div class="time-cell">Sáng 20'</div>
+      <div class="activity-cell"><strong>IPA + Phát âm</strong> — nghe & lặp âm mới, shadowing câu ngắn<br><em>Công cụ: Forvo, YouGlish, Cambridge Dictionary</em></div>
+    </div>
+    <div class="time-block">
+      <div class="time-cell">Sáng 25'</div>
+      <div class="activity-cell"><strong>Ngữ pháp + Từ vựng</strong> — học 1 điểm ngữ pháp, 5–8 từ mới<br><em>Công cụ: Anki, thẻ flashcard AI tạo sẵn</em></div>
+    </div>
+    <div class="time-block">
+      <div class="time-cell">Chiều 30'</div>
+      <div class="activity-cell"><strong>Đọc truyện song ngữ</strong> — đọc to, nhẩm lại, tra IPA từ lạ<br><em>AI tạo truyện từ ngữ pháp + từ vựng ngày hôm đó</em></div>
+    </div>
+    <div class="time-block">
+      <div class="time-cell">Tối 15'</div>
+      <div class="activity-cell"><strong>Viết + Ôn tập</strong> — viết 3–5 câu dùng từ/ngữ pháp mới<br><em>Sau đó ôn lại Anki 10 phút</em></div>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <strong>💡 Nguyên tắc vàng:</strong> Không cần học nhiều — cần học <em>đúng cách và đều đặn.</em> 90 phút mỗi ngày nhất quán hơn 5 tiếng một tuần rồi bỏ.
+  </div>
+
+  <hr class="rule-heavy">
+
+  <!-- PHASE 1 -->
+  <div id="phase1" class="section-header">
+    <div class="section-eyebrow">Giai đoạn 1 · Ngày 1–30</div>
+    <div class="section-title">Nền Tảng Phát Âm & Câu Cơ Bản</div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-num">PHASE 01</span>
+      <span class="phase-title">Khởi Động</span>
+    </div>
+    <div class="phase-range">Ngày 1 → 30 · Tháng đầu tiên</div>
+    <div class="phase-goal">🎯 Mục tiêu: Đọc được IPA, phát âm chuẩn 44 âm tiếng Anh, ghép câu đơn giản với động từ "to be" và thì hiện tại đơn.</div>
+    <div class="phase-skills">
+      <span class="skill-badge badge-ipa">IPA cơ bản</span>
+      <span class="skill-badge badge-grammar">To be · Thì hiện tại đơn</span>
+      <span class="skill-badge badge-vocab">150 từ vựng thiết yếu</span>
+      <span class="skill-badge badge-shadowing">Shadowing câu đơn</span>
+    </div>
+  </div>
+
+  <!-- DAY SAMPLES -->
+  <div class="days-grid">
+
+    <!-- DAY 1 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-number">Ngày 01</span>
+        <span class="day-topic">Chào hỏi & Động từ "to be"</span>
+      </div>
+      <div class="day-card-body">
+        <div>
+          <div class="day-section-title">IPA hôm nay</div>
+          <div class="ipa-row"><span class="ipa-symbol">/iː/</span> <span>see, me, be</span></div>
+          <div class="ipa-row"><span class="ipa-symbol">/ɪ/</span> <span>is, in, it</span></div>
+          <div class="ipa-row"><span class="ipa-symbol">/æ/</span> <span>am, and, at</span></div>
+
+          <div class="day-section-title" style="margin-top:16px">Ngữ pháp</div>
+          <div class="grammar-formula">I am / You are / He is / She is</div>
+          <div style="font-size:14px; color:var(--muted)">Dùng để nói về danh tính, nghề nghiệp, cảm xúc.</div>
+        </div>
+        <div>
+          <div class="day-section-title">Từ vựng (5 từ)</div>
+          <div class="vocab-row">
+            <div class="vocab-en">hello <span class="vocab-ipa">/həˈloʊ/</span></div>
+            <div class="vocab-vi">→ xin chào</div>
+          </div>
+          <div class="vocab-row">
+            <div class="vocab-en">name <span class="vocab-ipa">/neɪm/</span></div>
+            <div class="vocab-vi">→ tên</div>
+          </div>
+          <div class="vocab-row">
+            <div class="vocab-en">student <span class="vocab-ipa">/ˈstjuːdənt/</span></div>
+            <div class="vocab-vi">→ học sinh</div>
+          </div>
+          <div class="vocab-row">
+            <div class="vocab-en">happy <span class="vocab-ipa">/ˈhæpi/</span></div>
+            <div class="vocab-vi">→ vui, hạnh phúc</div>
+          </div>
+          <div class="vocab-row">
+            <div class="vocab-en">today <span class="vocab-ipa">/təˈdeɪ/</span></div>
+            <div class="vocab-vi">→ hôm nay</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BILINGUAL STORY DAY 1 -->
+      <div style="padding:0 24px 24px">
+        <div class="story-block">
+          <div class="story-label">Truyện Song Ngữ · Ngày 1</div>
+          <div class="story-title">"Buổi sáng đầu tiên"</div>
+          <div class="story-text">
+            Tôi thức dậy (<strong>I wake up</strong>) vào buổi sáng (<strong>in the morning</strong>).
+            Tôi nhìn vào gương và nói (<strong>I look in the mirror and say</strong>):
+            "<strong>Hello! My name is Nam. I am a student. I am happy today.</strong>"
+            Xin chào! Tên tôi là Nam. Tôi là học sinh. Tôi vui hôm nay.
+            Mẹ tôi (<strong>My mother</strong>) gọi từ bếp (<strong>calls from the kitchen</strong>):
+            "<strong>Nam! Are you ready?</strong>" — Nam! Con đã sẵn sàng chưa?
+            Tôi trả lời (<strong>I answer</strong>): "<strong>Yes! I am ready!</strong>"
+          </div>
+          <div class="story-note">📢 Shadowing: Đọc to đoạn này 3 lần, bắt chước giọng điệu tự nhiên. Nhấn mạnh các từ in đậm.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 7 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-number">Ngày 07</span>
+        <span class="day-topic">Thì hiện tại đơn (Present Simple)</span>
+      </div>
+      <div class="day-card-body">
+        <div>
+          <div class="day-section-title">IPA hôm nay</div>
+          <div class="ipa-row"><span class="ipa-symbol">/θ/</span> <span>think, three, month</span></div>
+          <div class="ipa-row"><span class="ipa-symbol">/ð/</span> <span>the, this, that</span></div>
+
+          <div class="day-section-title" style="margin-top:16px">Ngữ pháp</div>
+          <div class="grammar-formula">S + V(s/es) — thói quen, sự thật</div>
+          <div style="font-size:14px; color:var(--muted)">He works / She studies / I eat</div>
+        </div>
+        <div>
+          <div class="day-section-title">Từ vựng (7 từ)</div>
+          <div class="vocab-row">
+            <div class="vocab-en">work <span class="vocab-ipa">/wɜːrk/</span></div>
+            <div class="vocab-vi">→ làm việc</div>
+          </div>
+          <div class="vocab-row">
+            <div class="vocab-en">eat <span class="vocab-ipa">/iːt/</span></div>
+            <div class="vocab-vi">→ ăn</div>
+          </div>
+          <div class="vocab-row">
+            <div class="vocab-en">sleep <span class="vocab-ipa">/sliːp/</span></div>
+            <div class="vocab-vi">→ ngủ</div>
+          </div>
+          <div class="vocab-row">
+            <div class="vocab-en">study <span class="vocab-ipa">/ˈstʌdi/</span></div>
+            <div class="vocab-vi">→ học</div>
+          </div>
+          <div class="vocab-row">
+            <div class="vocab-en">every day <span class="vocab-ipa">/ˈevri deɪ/</span></div>
+            <div class="vocab-vi">→ mỗi ngày</div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:0 24px 24px">
+        <div class="story-block">
+          <div class="story-label">Truyện Song Ngữ · Ngày 7</div>
+          <div class="story-title">"Một ngày bình thường của Minh"</div>
+          <div class="story-text">
+            Minh thức dậy lúc 6 giờ (<strong>Minh wakes up at six o'clock</strong>).
+            Anh ấy ăn sáng (<strong>He eats breakfast</strong>) rồi đi học (<strong>then goes to school</strong>).
+            Minh học tiếng Anh (<strong>Minh studies English</strong>) mỗi ngày (<strong>every day</strong>).
+            Anh ấy nghĩ rằng (<strong>He thinks that</strong>) tiếng Anh rất thú vị (<strong>English is very interesting</strong>).
+            Buổi tối (<strong>In the evening</strong>), Minh làm bài tập (<strong>Minh does his homework</strong>)
+            rồi đi ngủ lúc 10 giờ (<strong>then sleeps at ten o'clock</strong>).
+            Đây là thói quen của anh ấy (<strong>This is his routine</strong>).
+          </div>
+          <div class="story-note">📢 Chú ý: động từ "wakes, eats, goes, studies, thinks, does" — tất cả thêm s/es vì chủ ngữ là "He/She/It".</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 14 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-number">Ngày 14</span>
+        <span class="day-topic">Thì hiện tại tiếp diễn (Present Continuous)</span>
+      </div>
+      <div class="day-card-body">
+        <div>
+          <div class="day-section-title">IPA hôm nay</div>
+          <div class="ipa-row"><span class="ipa-symbol">/ŋ/</span> <span>going, reading, doing</span></div>
+          <div class="ipa-row"><span class="ipa-symbol">/ɑː/</span> <span>are, car, far</span></div>
+
+          <div class="day-section-title" style="margin-top:16px">Ngữ pháp</div>
+          <div class="grammar-formula">S + am/is/are + V-ing</div>
+          <div style="font-size:14px; color:var(--muted)">Diễn tả hành động đang xảy ra ngay lúc nói</div>
+        </div>
+        <div>
+          <div class="day-section-title">Từ vựng (6 từ)</div>
+          <div class="vocab-row">
+            <div class="vocab-en">reading <span class="vocab-ipa">/ˈriːdɪŋ/</span></div>
+            <div class="vocab-vi">→ đang đọc</div>
+          </div>
+          <div class="vocab-row">
+            <div class="vocab-en">writing <span class="vocab-ipa">/ˈraɪtɪŋ/</span></div>
+            <div class="vocab-vi">→ đang viết</div>
+          </div>
+          <div class="vocab-row">
+            <div class="vocab-en">listening <span class="vocab-ipa">/ˈlɪsənɪŋ/</span></div>
+            <div class="vocab-vi">→ đang nghe</div>
+          </div>
+          <div class="vocab-row">
+            <div class="vocab-en">now <span class="vocab-ipa">/naʊ/</span></div>
+            <div class="vocab-vi">→ bây giờ</div>
+          </div>
+          <div class="vocab-row">
+            <div class="vocab-en">outside <span class="vocab-ipa">/ˌaʊtˈsaɪd/</span></div>
+            <div class="vocab-vi">→ bên ngoài</div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:0 24px 24px">
+        <div class="story-block">
+          <div class="story-label">Truyện Song Ngữ · Ngày 14</div>
+          <div class="story-title">"Trong quán cà phê"</div>
+          <div class="story-text">
+            Lan đang ngồi trong quán cà phê (<strong>Lan is sitting in a coffee shop</strong>).
+            Cô ấy đang đọc sách (<strong>She is reading a book</strong>) và nghe nhạc (<strong>and listening to music</strong>).
+            Bên ngoài (<strong>Outside</strong>), trời đang mưa (<strong>it is raining</strong>).
+            Người bạn của cô ấy gọi điện (<strong>Her friend is calling</strong>):
+            "<strong>What are you doing?</strong>" — Bạn đang làm gì vậy?
+            Lan trả lời (<strong>Lan answers</strong>):
+            "<strong>I am reading and drinking coffee. It is raining outside, but I am happy!</strong>"
+            Tôi đang đọc và uống cà phê. Trời đang mưa bên ngoài, nhưng tôi đang vui!
+          </div>
+          <div class="story-note">📢 Shadowing nâng cao: Thử nghe bản gốc tiếng Anh trên Google TTS rồi đọc theo từng câu.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /days-grid -->
+
+  <hr class="rule">
+
+  <!-- PHASE 2 -->
+  <div id="phase2" class="section-header">
+    <div class="section-eyebrow">Giai đoạn 2 · Ngày 31–60</div>
+    <div class="section-title">Mở Rộng Ngữ Pháp & Giao Tiếp</div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-num">PHASE 02</span>
+      <span class="phase-title">Phát Triển</span>
+    </div>
+    <div class="phase-range">Ngày 31 → 60 · Tháng thứ hai</div>
+    <div class="phase-goal">🎯 Mục tiêu: Nói được về quá khứ (past simple), tương lai (will/going to), dùng câu phức, bắt đầu giao tiếp hội thoại cơ bản.</div>
+    <div class="phase-skills">
+      <span class="skill-badge badge-ipa">IPA nâng cao (liên âm)</span>
+      <span class="skill-badge badge-grammar">Past Simple · Future · Modal verbs</span>
+      <span class="skill-badge badge-vocab">300 từ vựng chủ đề</span>
+      <span class="skill-badge badge-speaking">Hội thoại ngắn</span>
+      <span class="skill-badge badge-writing">Viết đoạn văn</span>
+    </div>
+  </div>
+
+  <div class="grammar-box">
+    <div class="grammar-title">Các điểm ngữ pháp giai đoạn 2</div>
+    <div class="grammar-formula">Past Simple: S + V(ed/2) + ... — "I worked yesterday"</div>
+    <div class="grammar-formula">Future: S + will + V — "I will go tomorrow"</div>
+    <div class="grammar-formula">Going to: S + am/is/are + going to + V — "I am going to study"</div>
+    <div class="grammar-formula">Modal: can / should / must / might + V</div>
+    <div style="margin-top:12px; font-size:14px; color:var(--muted)">Mỗi tuần tập trung 1 thì, kết hợp vào truyện song ngữ hàng ngày.</div>
+  </div>
+
+  <div class="story-block">
+    <div class="story-label">Ví dụ Truyện Song Ngữ · Ngày 35</div>
+    <div class="story-title">"Cuối tuần vừa rồi"</div>
+    <div class="story-text">
+      Cuối tuần vừa rồi (<strong>Last weekend</strong>), tôi đã đi đến Hội An (<strong>I went to Hội An</strong>).
+      Tôi thức dậy sớm (<strong>I woke up early</strong>) và bắt chuyến xe buýt đầu tiên (<strong>and took the first bus</strong>).
+      Thời tiết rất đẹp (<strong>The weather was beautiful</strong>).
+      Tôi đã đi bộ qua phố cổ (<strong>I walked through the old town</strong>),
+      ăn bánh mì (<strong>ate bánh mì</strong>), và chụp rất nhiều ảnh (<strong>and took many photos</strong>).
+      Vào buổi tối (<strong>In the evening</strong>), tôi đã nói chuyện với một du khách người Úc (<strong>I talked to an Australian tourist</strong>).
+      Đó là lần đầu tiên tôi nói tiếng Anh với người nước ngoài (<strong>It was my first time speaking English with a foreigner</strong>).
+      Tôi rất hồi hộp (<strong>I was very nervous</strong>), nhưng anh ấy rất thân thiện (<strong>but he was very friendly</strong>).
+    </div>
+    <div class="story-note">📢 Nhấn mạnh: Toàn bộ động từ đổi sang dạng quá khứ (went, woke, took, walked, ate, talked, was). Lặp lại 3 lần.</div>
+  </div>
+
+  <hr class="rule">
+
+  <!-- PHASE 3 -->
+  <div id="phase3" class="section-header">
+    <div class="section-eyebrow">Giai đoạn 3 · Ngày 61–90</div>
+    <div class="section-title">Đọc Hiểu & Viết Luận</div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-num">PHASE 03</span>
+      <span class="phase-title">Củng Cố</span>
+    </div>
+    <div class="phase-range">Ngày 61 → 90 · Tháng thứ ba</div>
+    <div class="phase-goal">🎯 Mục tiêu: Đọc bài văn ngắn không cần từ điển, viết đoạn 100–150 từ, nghe hiểu 70% hội thoại chậm, bắt đầu shadowing podcast ngắn.</div>
+    <div class="phase-skills">
+      <span class="skill-badge badge-reading">Đọc bài báo đơn giản</span>
+      <span class="skill-badge badge-writing">Viết luận ngắn</span>
+      <span class="skill-badge badge-shadowing">Shadowing podcast</span>
+      <span class="skill-badge badge-grammar">Câu phức · Mệnh đề quan hệ</span>
+      <span class="skill-badge badge-vocab">500+ từ vựng tích lũy</span>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="story-label">Ví dụ Truyện Song Ngữ · Ngày 75</div>
+    <div class="story-title">"Người bạn mà tôi đã gặp"</div>
+    <div class="story-text">
+      Có một người bạn (<strong>There is a friend</strong>) mà tôi đã gặp năm ngoái (<strong>whom I met last year</strong>).
+      Anh ấy là người đã dạy tôi (<strong>He is the person who taught me</strong>)
+      rằng thất bại không phải là kết thúc (<strong>that failure is not the end</strong>).
+      Vào lúc đó (<strong>At that time</strong>), tôi đang chuẩn bị cho một bài thuyết trình quan trọng (<strong>I was preparing for an important presentation</strong>)
+      nhưng tôi cảm thấy không đủ tự tin (<strong>but I felt not confident enough</strong>).
+      Anh ấy nói với tôi (<strong>He told me</strong>):
+      "<strong>The people who never fail are the people who never try.</strong>"
+      Những người không bao giờ thất bại là những người không bao giờ thử.
+      Câu nói đó đã thay đổi cách tôi nhìn nhận mọi thứ (<strong>That sentence changed the way I see things</strong>).
+    </div>
+    <div class="story-note">📢 Ngữ pháp: Chú ý mệnh đề quan hệ "whom I met", "who taught me", "who never fail" — dùng who/whom để nói về người.</div>
+  </div>
+
+  <hr class="rule">
+
+  <!-- PHASE 4 -->
+  <div id="phase4" class="section-header">
+    <div class="section-eyebrow">Giai đoạn 4 · Ngày 91–120</div>
+    <div class="section-title">Luyện Nói & Shadowing Chuyên Sâu</div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-num">PHASE 04</span>
+      <span class="phase-title">Tự Tin</span>
+    </div>
+    <div class="phase-range">Ngày 91 → 120 · Tháng cuối</div>
+    <div class="phase-goal">🎯 Mục tiêu: Nói chuyện 5–10 phút liên tục, shadowing video YouTube/TED-Ed tốc độ bình thường, viết email và tin nhắn tiếng Anh tự nhiên.</div>
+    <div class="phase-skills">
+      <span class="skill-badge badge-speaking">Nói liên tục 5+ phút</span>
+      <span class="skill-badge badge-shadowing">TED-Ed · BBC Learning</span>
+      <span class="skill-badge badge-writing">Email · Tin nhắn</span>
+      <span class="skill-badge badge-reading">Bài báo thật</span>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">Phương pháp Shadowing 4 bước</div>
+    <p><strong>1. Nghe</strong> toàn bộ đoạn — không nhìn bản dịch. &nbsp;|&nbsp; <strong>2. Đọc</strong> bản script, hiểu hết nghĩa. &nbsp;|&nbsp; <strong>3. Nghe + đọc theo</strong> đồng thời, không dừng. &nbsp;|&nbsp; <strong>4. Nói một mình</strong> không nhìn script — ghi âm lại và so sánh.</p>
+  </div>
+
+  <hr class="rule-heavy">
+
+  <!-- TOOLS -->
+  <div id="tools" class="section-header">
+    <div class="section-eyebrow">Công cụ hỗ trợ</div>
+    <div class="section-title">Bộ Công Cụ Học Tiếng Anh</div>
+  </div>
+
+  <div class="tools-grid">
+    <div class="tool-card">
+      <div class="tool-name">Anki</div>
+      <div class="tool-purpose">Flashcard lặp lại ngắt quãng — nhớ từ vựng lâu dài</div>
+      <div class="tool-skill">Từ vựng · Ôn tập</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-name">Forvo</div>
+      <div class="tool-purpose">Nghe phát âm từ người bản ngữ thật từ khắp nơi</div>
+      <div class="tool-skill">IPA · Phát âm</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-name">YouGlish</div>
+      <div class="tool-purpose">Xem từ được dùng trong video YouTube thật — ngữ cảnh tự nhiên</div>
+      <div class="tool-skill">Phát âm · Nghe</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-name">ELSA Speak</div>
+      <div class="tool-purpose">AI chấm điểm phát âm của bạn — phản hồi tức thì</div>
+      <div class="tool-skill">Nói · IPA</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-name">BBC Learning</div>
+      <div class="tool-purpose">Video & podcast tốc độ chậm, dành riêng cho người học</div>
+      <div class="tool-skill">Nghe · Shadowing</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-name">Claude AI</div>
+      <div class="tool-purpose">Tạo truyện song ngữ hàng ngày, giải thích ngữ pháp, chữa bài viết</div>
+      <div class="tool-skill">Tất cả kỹ năng</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-name">Cambridge Dict.</div>
+      <div class="tool-purpose">Từ điển chuẩn: IPA, nghĩa, ví dụ câu, phát âm Anh/Mỹ</div>
+      <div class="tool-skill">IPA · Từ vựng</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-name">Speechling</div>
+      <div class="tool-purpose">Ghi âm rồi giáo viên bản ngữ chữa phát âm cho bạn</div>
+      <div class="tool-skill">Nói · Shadowing</div>
+    </div>
+  </div>
+
+  <hr class="rule-heavy">
+
+  <!-- METHOD -->
+  <div id="method" class="section-header">
+    <div class="section-eyebrow">Quy trình hàng ngày</div>
+    <div class="section-title">3 Bước Mỗi Ngày Với AI</div>
+  </div>
+
+  <div class="daily-schedule">
+    <div class="schedule-title">Cách 1: Dùng Claude Code (khuyên dùng)</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.9; padding:20px; background:var(--paper); border:1px solid var(--rule); color:var(--ink);">
+      <span style="color:var(--muted)"># Mở terminal trong thư mục dự án</span><br>
+      <strong style="color:var(--green)">cd engish-zero-to-b1</strong><br>
+      <strong style="color:var(--green)">claude</strong><br><br>
+      <span style="color:var(--muted)"># Claude Code tự động đọc .claude/CLAUDE.md</span><br>
+      <span style="color:var(--muted)"># → Biết ngay bạn đang ở đâu, không cần paste gì cả</span><br>
+      <span style="color:var(--muted)"># Chỉ cần nói: "Bắt đầu buổi học hôm nay"</span>
+    </div>
+  </div>
+
+  <div class="daily-schedule" style="margin-top:16px">
+    <div class="schedule-title">Cách 2: Dùng ChatGPT / Claude Web</div>
+    <div class="time-block">
+      <div class="time-cell" style="color:var(--accent); font-weight:500">Bước 1</div>
+      <div class="activity-cell"><strong>Mở chat mới</strong> → Copy nội dung file <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:rgba(0,0,0,0.05); padding:2px 6px; border-radius:2px">prompts/resume_session.md</span> gửi cho AI<br><em>→ AI đọc 5 file memory, báo cáo bạn đang ở ngày bao nhiêu, đã học gì, điểm yếu cần chú ý</em></div>
+    </div>
+    <div class="time-block">
+      <div class="time-cell" style="color:var(--accent); font-weight:500">Bước 2</div>
+      <div class="activity-cell"><strong>Học bài</strong> → Copy nội dung file <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:rgba(0,0,0,0.05); padding:2px 6px; border-radius:2px">prompts/daily_lesson.md</span> gửi cho AI<br><em>→ AI tạo bài học đầy đủ 6 phần: IPA + ngữ pháp + từ vựng + truyện song ngữ + bài tập viết + shadowing</em></div>
+    </div>
+    <div class="time-block">
+      <div class="time-cell" style="color:var(--accent); font-weight:500">Bước 3</div>
+      <div class="activity-cell"><strong>Kết thúc</strong> → Copy nội dung file <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:rgba(0,0,0,0.05); padding:2px 6px; border-radius:2px">prompts/end_session.md</span> gửi cho AI<br><em>→ AI tự cập nhật hết 5 file memory: progress, vocabulary, grammar, weak_spots. Lần sau mở lại — AI nhớ hết.</em></div>
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-top:20px">
+    <strong>📁 Prompt bổ sung:</strong> Ngoài 3 prompt chính, bạn còn có <span style="font-family:'JetBrains Mono',monospace; font-size:12px">prompts/story_format.md</span> (tạo truyện riêng), <span style="font-family:'JetBrains Mono',monospace; font-size:12px">prompts/fix_mistakes.md</span> (chữa lỗi), <span style="font-family:'JetBrains Mono',monospace; font-size:12px">prompts/shadowing.md</span> (luyện shadowing).
+  </div>
+
+  <div class="tip-box">
+    <strong>🗓️ Gợi ý tuần đầu tiên:</strong> Ngày 1 học IPA /iː/ + to be. Ngày 2 thêm /ɪ/ + tính từ. Ngày 3 review + truyện dài hơn. Ngày 4 thêm thì mới. Ngày 5 shadowing. Ngày 6 viết. Ngày 7 ôn tổng kết tuần.
+  </div>
+
+  <div class="callout" style="margin-top:48px; background:var(--blue);">
+    <div class="callout-title">Bắt đầu ngay hôm nay 🚀</div>
+    <p>Dùng Claude Code: mở terminal → <strong>cd engish-zero-to-b1 && claude</strong> → nói "Bắt đầu buổi học hôm nay". Hoặc copy <strong>prompts/resume_session.md</strong> vào ChatGPT/Claude web. AI sẽ tạo đầy đủ bài học cho bạn!</p>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+  // Make tracker cells interactive
+  document.querySelectorAll('.tracker-cell').forEach(cell => {
+    cell.addEventListener('click', () => cell.classList.toggle('done'));
+  });
+
+  // Smooth scroll for nav
+  document.querySelectorAll('.toc-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+</body>
+</html>
